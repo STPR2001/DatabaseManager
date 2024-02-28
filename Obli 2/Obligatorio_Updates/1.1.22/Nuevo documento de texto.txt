@@ -1,0 +1,204 @@
+createTable(hola
+addCol(hola,ci,integer,primary key
+addCol(hola,edad,integer,any
+addCol(hola,dire,string,any
+addCol(hola,ci,integer,any
+addCol(hola,sexo,integer,any
+insertInto(hola,ci:edad:dire,pepe:20:asd
+insertInto(hola,ci:edad:dire,juan:45:asdd
+insertInto(hola,ci:edad:dire,juan:20:afdfs
+insertInto(hola,ci:edad:dire:ci,juan:20:afdfs:578432
+insertInto(hola,ci:edad:dire:ci,julian:20:afdfs:578432
+selectWhere(hola,,hola2
+printmetadata(hola
+printmetadata(hola2
+printdatatable(hola
+printdatatable(hola2
+
+createTable(hola
+addCol(hola,edad,integer,primary key
+insertInto(hola,edad,200
+selectWhere(hola,edad=200,hola2
+printmetadata(hola
+printmetadata(hola2
+printdatatable(hola
+printdatatable(hola2
+
+createTable(hola
+createTable(hola2
+addCol(hola,ci,string,primary key
+addCol(hola,edad,string,any
+addCol(hola,sexo,string,any
+addCol(hola,direccion,string,any
+addCol(hola,autor,string,any
+insertInto(hola,ci:direccion,000:jaimeross
+insertInto(hola,ci:autor,999:leandrogomez
+insertInto(hola,ci,333
+insertInto(hola,ci:edad,123:20
+insertInto(hola,ci,456
+insertInto(hola,ci:edad,111:80
+addCol(hola2,ci,string,primary key
+addCol(hola2,ci,string,any
+insertInto(hola2,ci,333
+insertInto(hola2,ci,456
+insertInto(hola2,ci:ci,111:pepe
+insertInto(hola2,ci:ci,123:juan
+printdatatable(hola
+printdatatable(hola2
+join(hola,hola2,hola3
+printdatatable(hola3
+
+
+
+
+
+createTable(hola
+createTable(hola2
+addCol(hola,ci,integer,primary key
+addCol(hola,edad,integer,any
+insertInto(hola,ci,333
+insertInto(hola,ci,32312
+insertInto(hola,ci:edad,123:20
+insertInto(hola,ci,456
+insertInto(hola,ci:edad,111:80
+addCol(hola2,ci,integer,primary key
+insertInto(hola2,ci,456
+insertInto(hola2,ci,333
+insertInto(hola2,ci,111
+insertInto(hola2,ci,123
+insertInto(hola2,ci,890
+printdatatable(hola
+printdatatable(hola2
+join(hola,hola2,hola3
+printdatatable(hola3
+
+createTable(hola
+createTable(hola2
+addCol(hola,ci,integer,primary key
+addCol(hola,edad,integer,any
+addCol(hola,sexo,string,any
+addCol(hola,direccion,string,any
+addCol(hola,autor,string,any
+insertInto(hola,ci:direccion,1589:jaimeross
+insertInto(hola,ci:autor,999:leandrogomez
+insertInto(hola,ci,333
+insertInto(hola,ci:edad,123:20
+insertInto(hola,ci,456
+insertInto(hola,ci:edad,111:80
+addCol(hola2,ci,integer,primary key
+addCol(hola2,direccion,string,any
+addCol(hola2,ci,string,any
+insertInto(hola2,ci,333
+insertInto(hola2,ci,456
+insertInto(hola2,ci:ci,111:pepe
+insertInto(hola2,ci,999
+insertInto(hola2,ci:ci,123:juan
+insertInto(hola2,ci:direccion,543:felippone
+insertInto(hola2,ci,666
+printdatatable(hola
+printdatatable(hola2
+join(hola,hola2,hola3
+printdatatable(hola3
+
+
+createTable(hola
+createTable(hola2
+addCol(hola,ci,integer,primary key
+addCol(hola,edad,integer,any
+addCol(hola2,ci,integer,primary key
+addCol(hola2,edad,integer,any
+insertInto(hola,ci,123
+insertInto(hola2,ci,123
+printdatatable(hola
+printdatatable(hola2
+join(hola,hola2,hola3
+printdatatable(hola3
+
+
+
+printTables()
+selectWhere(alumnos,edad<18, personas) error tabla no existe
+createTable(personas)
+printTables()
+addCol(personas,ci,integer,primary key)
+addCol(personas,apellido,string,not empty)
+addCol(personas,ci,string,not empty)
+addCol(personas,edad,integer,any)
+insertInto(personas,ci:apellido:ci:edad,11:Perez:Juan:25)
+insertInto(personas,ci:apellido:ci:edad,22:Pereira:Agustina:15)
+insertInto(personas,ci:apellido:ci:edad,33:Almeida:Jose:16)
+insertInto(personas,ci:apellido:ci:edad,44:Mendiburu:Julia:15)
+insertInto(personas,ci:apellido:ci:edad,55:Gonzalez:Francisca:36)
+printDataTable(personas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+printTables()
+selectWhere(alumnos,edad<18, personas) error tabla no existe
+createTable(personas)
+printTables()
+addCol(personas,ci,integer,primary key)
+addCol(personas,apellido,string,not empty)
+addCol(personas,nombre,string,not empty)
+addCol(personas,edad,integer,any)
+insertInto(personas,ci:apellido:nombre:edad,11:Perez:Juan:25)
+insertInto(personas,ci:apellido:nombre:edad,22:Pereira:Agustina:15)
+insertInto(personas,ci:apellido:nombre:edad,33:Almeida:Jose:16)
+insertInto(personas,ci:apellido:nombre:edad,44:Mendiburu:Julia:15)
+insertInto(personas,ci:apellido:nombre:edad,55:Gonzalez:Francisca:36)
+printDataTable(personas)
+selectWhere(personas,edad<18,personas) error tabla existe
+selectWhere(perosnas,edad<18,alumnos) error tabla no existe
+selectWhere(personas,edad>180,alumnos) muestra tabla vac?a
+printDataTable(personas)
+printDataTable(alumnos)
+printMetaData(alumnos2)
+dropTable(alumnos)
+dropTable(alumnos2)
+printTables()
+selectWhere(persona,edades>180,alumnos) error tabla no existe
+printDataTable(alumnos) error tabla no existe
+selectWhere(personas,edad<18,alumnos)
+printDataTable(personas)
+printDataTable(alumnos)
+select(personas,apellido,alumnos) error tabla existe
+dropTable(alumnos)
+select(apellidos,apellido,personas) error tabla no existe
+select(personas,apellidos,alumnos) error columna no existe
+select(apellidos,apellido,alumnos)
+printTables()
+printDataTable(apellidos)
+printDataTable(personas)
+select(personas,apellido:edad,apellidos2)
+printDataTable(apellidos2)
+createTable(tiposPersona)
+addCol(tiposPersona,CI,int,not empty)
+addCol(tiposPersona,tipo,string,not empty)
+insertInto(tiposPersona,CI:tipo,11:Administrativo)
+insertInto(tiposPersona,CI:tipo,22:Estudiante)
+insertInto(tiposPersona,CI:tipo,33:Estudiante)
+insertInto(tiposPersona,CI:tipo,44:Estudiante)
+join(tipoPersona,personas,personasTipo) error tabla no existe
+join(tiposPersona,persona,personasTipo) error tabla no existe
+join(tiposPersona,personas,apellidos) error tabla existe
+printDataTable(tiposPersona)
+printDataTable(personas)
+printDataTable(personasTipo) error tabla no existe
+join(tiposPersona,personas,personasTipo)
+printDataTable(personasTipo)
+dropTable(personas)
+dropTable(personasTipo)
+dropTable(apellidos)
+dropTable(apellidos2)
+printTables()
+
